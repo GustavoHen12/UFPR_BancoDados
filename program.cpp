@@ -8,7 +8,16 @@ using ll = long long;
 #define OPERACAO 2
 #define ATRIBUTO 3
 
+// Crie um nó para cada T do escalonamento S
+// Aresta Ti -> Tj para cada r(x) em Tj depois de w(x) em Ti
+// Aresta Ti -> Tj para cada w(x) em Tj depois de r(x) em Ti
+// Aresta Ti -> Tj para cada w(x) em Tj depois de w(x) em Ti
+
 bool verificaSeriabilidade(vector<tuple<int, int, char, char>> &escalonamento, vector<int> &transacoes){
+    // Cria grafo
+
+    // para cada linha do escalonamento
+        // ind = j
 
     return false;
 }
