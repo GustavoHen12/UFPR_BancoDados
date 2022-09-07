@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 #include "seriabilidade.h"
+#include "equivalencia.h"
 
 using namespace std;
 
@@ -25,7 +26,14 @@ void processaEscalonamento(vector<operacao> &escalonamento, vector<int>& transac
     isSeriavel = verificaSeriabilidade(escalonamento, transacoes);
 
     // Realiza o teste de equivalencia
-    isSeriavel = verificaSeriabilidade(escalonamento, transacoes);
+    isEquivalente = verificaEquivalencia(escalonamento, transacoes);
+
+    // Imprime resultado
+    sort(transacoes.begin(), transacoes.end());
+    for(int i = 0; i < transacoes.size(); i++) cout << transacoes[i] << (i < transacoes.size()-1 ? "," : " ");
+    cout << (isSeriavel ? "SS" : "NS") << " ";
+    cout << (isEquivalente ? "SV" : "NV") << " ";
+    cout << endl;
 }
 
 int main() {
@@ -42,7 +50,6 @@ int main() {
         agendamento.push_back(op_transacao);
 
         if(processaTransacoes(agendamento, transacoes)){
-            cout << "processa\n";
             processaEscalonamento(agendamento, transacoes);
             agendamento.clear();
             transacoes.clear();

@@ -24,16 +24,12 @@ int criaGrafoSeriabilidade(vector<operacao> &escalonamento, vector<vector<int>>&
         }
     }
 
-    // Cria grafo
+    // Crie um nó para cada T do escalonamento S
     g.assign(quant_transacoes, vector<int>());
 
-    // Crie um nó para cada T do escalonamento S
-    // Aresta Ti -> Tj para cada r(x) em Tj depois de w(x) em Ti
-    // Aresta Ti -> Tj para cada w(x) em Tj depois de r(x) em Ti
-    // Aresta Ti -> Tj para cada w(x) em Tj depois de w(x) em Ti
     for(int tj = 0; tj < escalonamento.size(); tj++){
-        // char operacao = get<OPERACAO>(escalonamento[tj]);
         char atributo = escalonamento[tj].atributo;
+        // Aresta Ti -> Tj para cada r(x) em Tj depois de w(x) em Ti
         if(escalonamento[tj].isLeitura()) {
             for(int ti = 0; ti < tj; ti++){
                 if(escalonamento[ti].isEscrita() && escalonamento[ti].atributo == atributo && escalonamento[ti].transacao != escalonamento[tj].transacao){
@@ -42,9 +38,12 @@ int criaGrafoSeriabilidade(vector<operacao> &escalonamento, vector<vector<int>>&
             }
         } else if(escalonamento[tj].isEscrita()) {
             for(int ti = 0; ti < tj; ti++){
+                // Aresta Ti -> Tj para cada w(x) em Tj depois de r(x) em Ti
                 if(escalonamento[ti].isLeitura() && escalonamento[ti].atributo == atributo && escalonamento[ti].transacao != escalonamento[tj].transacao){
                     adicionaAresta(g, escalonamento[tj].transacao, escalonamento[ti].transacao);
-                } else if (escalonamento[ti].isEscrita() && escalonamento[ti].atributo == atributo && escalonamento[ti].transacao != escalonamento[tj].transacao){
+                }
+                // Aresta Ti -> Tj para cada w(x) em Tj depois de w(x) em Ti
+                else if (escalonamento[ti].isEscrita() && escalonamento[ti].atributo == atributo && escalonamento[ti].transacao != escalonamento[tj].transacao){
                     adicionaAresta(g, escalonamento[tj].transacao, escalonamento[ti].transacao);
                 }
             }
@@ -75,13 +74,6 @@ bool verificaSeriabilidade(vector<operacao> &escalonamento, vector<int>& transac
     // Cria grafo
     vector<vector<int>> g;
     int size = criaGrafoSeriabilidade(escalonamento, g);
-    for(int i = 0; i < g.size(); i++){
-        cout << i << ": ";
-        for(int x:g[i]){
-            cout << x << " ";
-        }
-        cout << endl;
-    }
 
     // Testa para encontrar ciclo
     vector<char> cor(size, 0);
@@ -93,7 +85,5 @@ bool verificaSeriabilidade(vector<operacao> &escalonamento, vector<int>& transac
             break;
     }
 
-    cout << "Possui ciclo: " << (inicio_ciclo != -1) << endl;
-
-    return inicio_ciclo != -1;
+    return inicio_ciclo == -1;
 }
