@@ -32,7 +32,7 @@ void processaEscalonamento(vector<operacao> &escalonamento, vector<int>& transac
     sort(transacoes.begin(), transacoes.end());
     for(int i = 0; i < transacoes.size(); i++) cout << transacoes[i] << (i < transacoes.size()-1 ? "," : " ");
     cout << (isSeriavel ? "SS" : "NS") << " ";
-    cout << (isEquivalente ? "SV" : "NV") << " ";
+    cout << (isEquivalente ? "SV" : "NV");
     cout << endl;
 }
 
@@ -45,14 +45,17 @@ int main() {
     // Le entrada
     int ts, transacao;
     char op, var;
+    int indice = 1;
     while(cin >> ts >> transacao >> op >> var){
         operacao op_transacao = operacao(ts, transacao, op, var);
         agendamento.push_back(op_transacao);
 
         if(processaTransacoes(agendamento, transacoes)){
+            cout << indice << " ";
             processaEscalonamento(agendamento, transacoes);
             agendamento.clear();
             transacoes.clear();
+            indice++;
         }
     }
 }
