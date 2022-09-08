@@ -6,7 +6,7 @@
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{seriabilidade_8h_aecff43ee5a52063b923bd28b4ae34021}{verifica\+Seriabilidade}} (vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&escalonamento)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função para verificar se o escalonamento é ou não seriável. A execução funciona em duas etapas, primeiramente é criado um grafo com as arestas seguindo as regras estabelecidas, após isso é realizado uma busca no grafo para verificar se ele possui ou não ciclos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -16,3 +16,17 @@ bool \mbox{\hyperlink{seriabilidade_8h_aecff43ee5a52063b923bd28b4ae34021}{verifi
 \doxysubsubsection{\texorpdfstring{verificaSeriabilidade()}{verificaSeriabilidade()}}
 {\footnotesize\ttfamily bool verifica\+Seriabilidade (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&}]{escalonamento }\end{DoxyParamCaption})}
 
+
+
+Função para verificar se o escalonamento é ou não seriável. A execução funciona em duas etapas, primeiramente é criado um grafo com as arestas seguindo as regras estabelecidas, após isso é realizado uma busca no grafo para verificar se ele possui ou não ciclos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em escalonamento} & Vetor com todas as operações do escalonamento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}

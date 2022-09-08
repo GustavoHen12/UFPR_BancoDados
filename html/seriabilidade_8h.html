@@ -76,6 +76,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aecff43ee5a52063b923bd28b4ae34021"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seriabilidade_8h.html#aecff43ee5a52063b923bd28b4ae34021">verificaSeriabilidade</a> (vector&lt; <a class="el" href="classoperacao.html">operacao</a> &gt; &amp;escalonamento)</td></tr>
+<tr class="memdesc:aecff43ee5a52063b923bd28b4ae34021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para verificar se o escalonamento é ou não seriável. A execução funciona em duas etapas, primeiramente é criado um grafo com as arestas seguindo as regras estabelecidas, após isso é realizado uma busca no grafo para verificar se ele possui ou não ciclos.  <a href="seriabilidade_8h.html#aecff43ee5a52063b923bd28b4ae34021">More...</a><br /></td></tr>
 <tr class="separator:aecff43ee5a52063b923bd28b4ae34021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -94,6 +95,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Função para verificar se o escalonamento é ou não seriável. A execução funciona em duas etapas, primeiramente é criado um grafo com as arestas seguindo as regras estabelecidas, após isso é realizado uma busca no grafo para verificar se ele possui ou não ciclos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">escalonamento</td><td>Vetor com todas as operações do escalonamento </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
 
 </div>
 </div>

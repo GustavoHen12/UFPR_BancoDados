@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fim_5fciclo_61',['fim_ciclo',['../seriabilidade_8cpp.html#aa73d8e4acb0e70d2492b2d128df008fd',1,'seriabilidade.cpp']]]
+  ['nodos_58',['nodos',['../seriabilidade_8cpp.html#ad6687614def2b10dbbaad9f1e9b8d688',1,'seriabilidade.cpp']]]
 ];

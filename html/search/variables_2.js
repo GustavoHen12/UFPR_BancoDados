@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['escrita_60',['ESCRITA',['../seriabilidade_8cpp.html#a4bb35a582b31d33685e6899a9a6e683b',1,'seriabilidade.cpp']]]
+  ['inicio_5fciclo_57',['inicio_ciclo',['../seriabilidade_8cpp.html#adbd152c55ff3cbaf9710e262c53dd5f3',1,'seriabilidade.cpp']]]
 ];

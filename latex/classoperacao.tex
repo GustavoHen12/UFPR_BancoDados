@@ -2,19 +2,24 @@
 \label{classoperacao}\index{operacao@{operacao}}
 
 
+Objeto para representar uma operação, ou seja, uma linha do agendamento.  
+
+
+
+
 {\ttfamily \#include $<$transacao.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classoperacao_a9054f9590a33e2f26eb1730d1f476507}{operacao}} (int ts, int tr, char op\+\_\+tr, char atr)
-\item 
+\begin{DoxyCompactList}\small\item\em Controi uma nova operação. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classoperacao_a6cb0aaeb1a6affdba7a5609b7ef68a29}{is\+Leitura}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Método para verificar se a operação é de leitura. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classoperacao_af8d2ff1960b7f3ce905f945ac68ebc12}{is\+Escrita}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Método para verificar se a operação é de escrita. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classoperacao_aa70813ace5873cc30825422967fb1cec}{is\+Commit}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Método para verificar se a operação é um commit. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,6 +33,9 @@ char \mbox{\hyperlink{classoperacao_a57d5ffaa86d0367c048cb1ef29996d8d}{atributo}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Objeto para representar uma operação, ou seja, uma linha do agendamento. 
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classoperacao_a9054f9590a33e2f26eb1730d1f476507}\label{classoperacao_a9054f9590a33e2f26eb1730d1f476507}} 
 \index{operacao@{operacao}!operacao@{operacao}}
@@ -37,6 +45,21 @@ char \mbox{\hyperlink{classoperacao_a57d5ffaa86d0367c048cb1ef29996d8d}{atributo}
 
 
 
+Controi uma nova operação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ts} & Timestamp \\
+\hline
+{\em tr} & Transação \\
+\hline
+{\em op\+\_\+tr} & Operação \\
+\hline
+{\em atr} & Atributo \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classoperacao_aa70813ace5873cc30825422967fb1cec}\label{classoperacao_aa70813ace5873cc30825422967fb1cec}} 
 \index{operacao@{operacao}!isCommit@{isCommit}}
@@ -44,18 +67,45 @@ char \mbox{\hyperlink{classoperacao_a57d5ffaa86d0367c048cb1ef29996d8d}{atributo}
 \doxysubsubsection{\texorpdfstring{isCommit()}{isCommit()}}
 {\footnotesize\ttfamily bool operacao\+::is\+Commit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Método para verificar se a operação é um commit. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classoperacao_af8d2ff1960b7f3ce905f945ac68ebc12}\label{classoperacao_af8d2ff1960b7f3ce905f945ac68ebc12}} 
 \index{operacao@{operacao}!isEscrita@{isEscrita}}
 \index{isEscrita@{isEscrita}!operacao@{operacao}}
 \doxysubsubsection{\texorpdfstring{isEscrita()}{isEscrita()}}
 {\footnotesize\ttfamily bool operacao\+::is\+Escrita (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Método para verificar se a operação é de escrita. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
 \mbox{\Hypertarget{classoperacao_a6cb0aaeb1a6affdba7a5609b7ef68a29}\label{classoperacao_a6cb0aaeb1a6affdba7a5609b7ef68a29}} 
 \index{operacao@{operacao}!isLeitura@{isLeitura}}
 \index{isLeitura@{isLeitura}!operacao@{operacao}}
 \doxysubsubsection{\texorpdfstring{isLeitura()}{isLeitura()}}
 {\footnotesize\ttfamily bool operacao\+::is\+Leitura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Método para verificar se a operação é de leitura. 
+
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Data Documentation}

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['op_19',['op',['../classoperacao.html#ac39c059951193af7c219a30b66a0025d',1,'operacao']]],
-  ['operacao_20',['operacao',['../classoperacao.html',1,'operacao'],['../classoperacao.html#a9054f9590a33e2f26eb1730d1f476507',1,'operacao::operacao()']]]
+  ['processaescalonamento_18',['processaEscalonamento',['../escalona_8cpp.html#ab349088b44d2d6f2bf5df9d44a8f1594',1,'escalona.cpp']]],
+  ['processatransacoes_19',['processaTransacoes',['../escalona_8cpp.html#a09ff468539e973a5aca9caec74b82e73',1,'escalona.cpp']]]
 ];

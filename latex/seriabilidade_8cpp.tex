@@ -5,21 +5,15 @@
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{seriabilidade_8cpp_ac37406cf5fd2c68937f46696d99ac164}{adiciona\+Aresta}} (vector$<$ vector$<$ int $>$$>$ \&g, int tj, int ti)
-\item 
-int \mbox{\hyperlink{seriabilidade_8cpp_a2179f00519e21a4a4be1d1495f718ad8}{cria\+Grafo\+Seriabilidade}} (vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&escalonamento, vector$<$ vector$<$ int $>$$>$ \&g)
-\item 
+\begin{DoxyCompactList}\small\item\em Função auxiliar para adicionar uma aresta do nodo da transação ti para o nodo da transação tj. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{seriabilidade_8cpp_ace2681eb62c4a72af2ba04fe4b818b0c}{dfs}} (int v, vector$<$ vector$<$ int $>$$>$ \&g, vector$<$ char $>$ \&cor, vector$<$ int $>$ \&pai)
-\item 
+\begin{DoxyCompactList}\small\item\em Algoritmo de busca em profundidade no grafo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{seriabilidade_8cpp_a2179f00519e21a4a4be1d1495f718ad8}{cria\+Grafo\+Seriabilidade}} (vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&escalonamento, vector$<$ vector$<$ int $>$$>$ \&g)
+\begin{DoxyCompactList}\small\item\em Função responsável por criar um grafo a partir do escalonamento. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{seriabilidade_8cpp_aecff43ee5a52063b923bd28b4ae34021}{verifica\+Seriabilidade}} (vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&escalonamento)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Função para verificar se o escalonamento é ou não seriável. A execução funciona em duas etapas, primeiramente é criado um grafo com as arestas seguindo as regras estabelecidas, após isso é realizado uma busca no grafo para verificar se ele possui ou não ciclos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
-\item 
-char \mbox{\hyperlink{seriabilidade_8cpp_a9ce60cd5115b9d5435fb4b994c6f46f9}{LEITURA}} = \textquotesingle{}R\textquotesingle{}
-\item 
-char \mbox{\hyperlink{seriabilidade_8cpp_a4bb35a582b31d33685e6899a9a6e683b}{ESCRITA}} = \textquotesingle{}W\textquotesingle{}
-\item 
-char \mbox{\hyperlink{seriabilidade_8cpp_a19126fe34f3e7a2cfdf627d12e33fb86}{COMMIT}} = \textquotesingle{}C\textquotesingle{}
 \item 
 int \mbox{\hyperlink{seriabilidade_8cpp_adbd152c55ff3cbaf9710e262c53dd5f3}{inicio\+\_\+ciclo}}
 \item 
@@ -36,18 +30,65 @@ map$<$ int, int $>$ \mbox{\hyperlink{seriabilidade_8cpp_ad6687614def2b10dbbaad9f
 \doxysubsubsection{\texorpdfstring{adicionaAresta()}{adicionaAresta()}}
 {\footnotesize\ttfamily void adiciona\+Aresta (\begin{DoxyParamCaption}\item[{vector$<$ vector$<$ int $>$$>$ \&}]{g,  }\item[{int}]{tj,  }\item[{int}]{ti }\end{DoxyParamCaption})}
 
+
+
+Função auxiliar para adicionar uma aresta do nodo da transação ti para o nodo da transação tj. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Grafo \\
+\hline
+{\em tj} & Identificador da transação Ti \\
+\hline
+{\em ti} & Identificador da transação Tj \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{seriabilidade_8cpp_a2179f00519e21a4a4be1d1495f718ad8}\label{seriabilidade_8cpp_a2179f00519e21a4a4be1d1495f718ad8}} 
 \index{seriabilidade.cpp@{seriabilidade.cpp}!criaGrafoSeriabilidade@{criaGrafoSeriabilidade}}
 \index{criaGrafoSeriabilidade@{criaGrafoSeriabilidade}!seriabilidade.cpp@{seriabilidade.cpp}}
 \doxysubsubsection{\texorpdfstring{criaGrafoSeriabilidade()}{criaGrafoSeriabilidade()}}
 {\footnotesize\ttfamily int cria\+Grafo\+Seriabilidade (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&}]{escalonamento,  }\item[{vector$<$ vector$<$ int $>$$>$ \&}]{g }\end{DoxyParamCaption})}
 
+
+
+Função responsável por criar um grafo a partir do escalonamento. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em escalonamento} & Vetor com as operações do escalonamento \\
+\hline
+{\em g} & O grafo é representado por uma lista de adjacência. Portanto deve ser passada uma lista vazia, e ao final da execução essa deve estar preenchida corretamente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Retorna a quantidade de transações presentes no escalonamento 
+\end{DoxyReturn}
 \mbox{\Hypertarget{seriabilidade_8cpp_ace2681eb62c4a72af2ba04fe4b818b0c}\label{seriabilidade_8cpp_ace2681eb62c4a72af2ba04fe4b818b0c}} 
 \index{seriabilidade.cpp@{seriabilidade.cpp}!dfs@{dfs}}
 \index{dfs@{dfs}!seriabilidade.cpp@{seriabilidade.cpp}}
 \doxysubsubsection{\texorpdfstring{dfs()}{dfs()}}
 {\footnotesize\ttfamily bool dfs (\begin{DoxyParamCaption}\item[{int}]{v,  }\item[{vector$<$ vector$<$ int $>$$>$ \&}]{g,  }\item[{vector$<$ char $>$ \&}]{cor,  }\item[{vector$<$ int $>$ \&}]{pai }\end{DoxyParamCaption})}
 
+
+
+Algoritmo de busca em profundidade no grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & Nodo a partir do qual será executado \\
+\hline
+{\em g} & Grafo (lista de adjacência) \\
+\hline
+{\em cor} & Vetor para indicar se o nodo já foi visitado ou não \\
+\hline
+{\em pai} & Vetor com o pai de cada nodo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
 \mbox{\Hypertarget{seriabilidade_8cpp_aecff43ee5a52063b923bd28b4ae34021}\label{seriabilidade_8cpp_aecff43ee5a52063b923bd28b4ae34021}} 
 \index{seriabilidade.cpp@{seriabilidade.cpp}!verificaSeriabilidade@{verificaSeriabilidade}}
 \index{verificaSeriabilidade@{verificaSeriabilidade}!seriabilidade.cpp@{seriabilidade.cpp}}
@@ -56,19 +97,21 @@ map$<$ int, int $>$ \mbox{\hyperlink{seriabilidade_8cpp_ad6687614def2b10dbbaad9f
 
 
 
+Função para verificar se o escalonamento é ou não seriável. A execução funciona em duas etapas, primeiramente é criado um grafo com as arestas seguindo as regras estabelecidas, após isso é realizado uma busca no grafo para verificar se ele possui ou não ciclos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em escalonamento} & Vetor com todas as operações do escalonamento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true 
+
+false 
+\end{DoxyReturn}
+
+
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{seriabilidade_8cpp_a19126fe34f3e7a2cfdf627d12e33fb86}\label{seriabilidade_8cpp_a19126fe34f3e7a2cfdf627d12e33fb86}} 
-\index{seriabilidade.cpp@{seriabilidade.cpp}!COMMIT@{COMMIT}}
-\index{COMMIT@{COMMIT}!seriabilidade.cpp@{seriabilidade.cpp}}
-\doxysubsubsection{\texorpdfstring{COMMIT}{COMMIT}}
-{\footnotesize\ttfamily char COMMIT = \textquotesingle{}C\textquotesingle{}}
-
-\mbox{\Hypertarget{seriabilidade_8cpp_a4bb35a582b31d33685e6899a9a6e683b}\label{seriabilidade_8cpp_a4bb35a582b31d33685e6899a9a6e683b}} 
-\index{seriabilidade.cpp@{seriabilidade.cpp}!ESCRITA@{ESCRITA}}
-\index{ESCRITA@{ESCRITA}!seriabilidade.cpp@{seriabilidade.cpp}}
-\doxysubsubsection{\texorpdfstring{ESCRITA}{ESCRITA}}
-{\footnotesize\ttfamily char ESCRITA = \textquotesingle{}W\textquotesingle{}}
-
 \mbox{\Hypertarget{seriabilidade_8cpp_aa73d8e4acb0e70d2492b2d128df008fd}\label{seriabilidade_8cpp_aa73d8e4acb0e70d2492b2d128df008fd}} 
 \index{seriabilidade.cpp@{seriabilidade.cpp}!fim\_ciclo@{fim\_ciclo}}
 \index{fim\_ciclo@{fim\_ciclo}!seriabilidade.cpp@{seriabilidade.cpp}}
@@ -80,12 +123,6 @@ map$<$ int, int $>$ \mbox{\hyperlink{seriabilidade_8cpp_ad6687614def2b10dbbaad9f
 \index{inicio\_ciclo@{inicio\_ciclo}!seriabilidade.cpp@{seriabilidade.cpp}}
 \doxysubsubsection{\texorpdfstring{inicio\_ciclo}{inicio\_ciclo}}
 {\footnotesize\ttfamily int inicio\+\_\+ciclo}
-
-\mbox{\Hypertarget{seriabilidade_8cpp_a9ce60cd5115b9d5435fb4b994c6f46f9}\label{seriabilidade_8cpp_a9ce60cd5115b9d5435fb4b994c6f46f9}} 
-\index{seriabilidade.cpp@{seriabilidade.cpp}!LEITURA@{LEITURA}}
-\index{LEITURA@{LEITURA}!seriabilidade.cpp@{seriabilidade.cpp}}
-\doxysubsubsection{\texorpdfstring{LEITURA}{LEITURA}}
-{\footnotesize\ttfamily char LEITURA = \textquotesingle{}R\textquotesingle{}}
 
 \mbox{\Hypertarget{seriabilidade_8cpp_ad6687614def2b10dbbaad9f1e9b8d688}\label{seriabilidade_8cpp_ad6687614def2b10dbbaad9f1e9b8d688}} 
 \index{seriabilidade.cpp@{seriabilidade.cpp}!nodos@{nodos}}

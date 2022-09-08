@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['leitura_16',['LEITURA',['../seriabilidade_8cpp.html#a9ce60cd5115b9d5435fb4b994c6f46f9',1,'seriabilidade.cpp']]]
+  ['main_14',['main',['../escalona_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'escalona.cpp']]]
 ];

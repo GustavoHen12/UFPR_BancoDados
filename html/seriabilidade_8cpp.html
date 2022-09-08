@@ -74,22 +74,20 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ac37406cf5fd2c68937f46696d99ac164"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seriabilidade_8cpp.html#ac37406cf5fd2c68937f46696d99ac164">adicionaAresta</a> (vector&lt; vector&lt; int &gt;&gt; &amp;g, int tj, int ti)</td></tr>
+<tr class="memdesc:ac37406cf5fd2c68937f46696d99ac164"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função auxiliar para adicionar uma aresta do nodo da transação ti para o nodo da transação tj.  <a href="seriabilidade_8cpp.html#ac37406cf5fd2c68937f46696d99ac164">More...</a><br /></td></tr>
 <tr class="separator:ac37406cf5fd2c68937f46696d99ac164"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2179f00519e21a4a4be1d1495f718ad8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seriabilidade_8cpp.html#a2179f00519e21a4a4be1d1495f718ad8">criaGrafoSeriabilidade</a> (vector&lt; <a class="el" href="classoperacao.html">operacao</a> &gt; &amp;escalonamento, vector&lt; vector&lt; int &gt;&gt; &amp;g)</td></tr>
-<tr class="separator:a2179f00519e21a4a4be1d1495f718ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace2681eb62c4a72af2ba04fe4b818b0c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seriabilidade_8cpp.html#ace2681eb62c4a72af2ba04fe4b818b0c">dfs</a> (int v, vector&lt; vector&lt; int &gt;&gt; &amp;g, vector&lt; char &gt; &amp;cor, vector&lt; int &gt; &amp;pai)</td></tr>
+<tr class="memdesc:ace2681eb62c4a72af2ba04fe4b818b0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Algoritmo de busca em profundidade no grafo.  <a href="seriabilidade_8cpp.html#ace2681eb62c4a72af2ba04fe4b818b0c">More...</a><br /></td></tr>
 <tr class="separator:ace2681eb62c4a72af2ba04fe4b818b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2179f00519e21a4a4be1d1495f718ad8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seriabilidade_8cpp.html#a2179f00519e21a4a4be1d1495f718ad8">criaGrafoSeriabilidade</a> (vector&lt; <a class="el" href="classoperacao.html">operacao</a> &gt; &amp;escalonamento, vector&lt; vector&lt; int &gt;&gt; &amp;g)</td></tr>
+<tr class="memdesc:a2179f00519e21a4a4be1d1495f718ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função responsável por criar um grafo a partir do escalonamento.  <a href="seriabilidade_8cpp.html#a2179f00519e21a4a4be1d1495f718ad8">More...</a><br /></td></tr>
+<tr class="separator:a2179f00519e21a4a4be1d1495f718ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecff43ee5a52063b923bd28b4ae34021"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seriabilidade_8cpp.html#aecff43ee5a52063b923bd28b4ae34021">verificaSeriabilidade</a> (vector&lt; <a class="el" href="classoperacao.html">operacao</a> &gt; &amp;escalonamento)</td></tr>
+<tr class="memdesc:aecff43ee5a52063b923bd28b4ae34021"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para verificar se o escalonamento é ou não seriável. A execução funciona em duas etapas, primeiramente é criado um grafo com as arestas seguindo as regras estabelecidas, após isso é realizado uma busca no grafo para verificar se ele possui ou não ciclos.  <a href="seriabilidade_8cpp.html#aecff43ee5a52063b923bd28b4ae34021">More...</a><br /></td></tr>
 <tr class="separator:aecff43ee5a52063b923bd28b4ae34021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a9ce60cd5115b9d5435fb4b994c6f46f9"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seriabilidade_8cpp.html#a9ce60cd5115b9d5435fb4b994c6f46f9">LEITURA</a> = 'R'</td></tr>
-<tr class="separator:a9ce60cd5115b9d5435fb4b994c6f46f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bb35a582b31d33685e6899a9a6e683b"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seriabilidade_8cpp.html#a4bb35a582b31d33685e6899a9a6e683b">ESCRITA</a> = 'W'</td></tr>
-<tr class="separator:a4bb35a582b31d33685e6899a9a6e683b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19126fe34f3e7a2cfdf627d12e33fb86"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seriabilidade_8cpp.html#a19126fe34f3e7a2cfdf627d12e33fb86">COMMIT</a> = 'C'</td></tr>
-<tr class="separator:a19126fe34f3e7a2cfdf627d12e33fb86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbd152c55ff3cbaf9710e262c53dd5f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seriabilidade_8cpp.html#adbd152c55ff3cbaf9710e262c53dd5f3">inicio_ciclo</a></td></tr>
 <tr class="separator:adbd152c55ff3cbaf9710e262c53dd5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa73d8e4acb0e70d2492b2d128df008fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="seriabilidade_8cpp.html#aa73d8e4acb0e70d2492b2d128df008fd">fim_ciclo</a></td></tr>
@@ -130,6 +128,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Função auxiliar para adicionar uma aresta do nodo da transação ti para o nodo da transação tj. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Grafo </td></tr>
+    <tr><td class="paramname">tj</td><td>Identificador da transação Ti </td></tr>
+    <tr><td class="paramname">ti</td><td>Identificador da transação Tj </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a2179f00519e21a4a4be1d1495f718ad8"></a>
@@ -157,6 +165,16 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Função responsável por criar um grafo a partir do escalonamento. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">escalonamento</td><td>Vetor com as operações do escalonamento </td></tr>
+    <tr><td class="paramname">g</td><td>O grafo é representado por uma lista de adjacência. Portanto deve ser passada uma lista vazia, e ao final da execução essa deve estar preenchida corretamente </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Retorna a quantidade de transações presentes no escalonamento </dd></dl>
 
 </div>
 </div>
@@ -198,6 +216,20 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Algoritmo de busca em profundidade no grafo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>Nodo a partir do qual será executado </td></tr>
+    <tr><td class="paramname">g</td><td>Grafo (lista de adjacência) </td></tr>
+    <tr><td class="paramname">cor</td><td>Vetor para indicar se o nodo já foi visitado ou não </td></tr>
+    <tr><td class="paramname">pai</td><td>Vetor com o pai de cada nodo </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
 </div>
 </div>
 <a id="aecff43ee5a52063b923bd28b4ae34021"></a>
@@ -216,37 +248,20 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Função para verificar se o escalonamento é ou não seriável. A execução funciona em duas etapas, primeiramente é criado um grafo com as arestas seguindo as regras estabelecidas, após isso é realizado uma busca no grafo para verificar se ele possui ou não ciclos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">escalonamento</td><td>Vetor com todas as operações do escalonamento </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true </dd>
+<dd>
+false </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a19126fe34f3e7a2cfdf627d12e33fb86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19126fe34f3e7a2cfdf627d12e33fb86">&#9670;&nbsp;</a></span>COMMIT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char COMMIT = 'C'</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4bb35a582b31d33685e6899a9a6e683b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bb35a582b31d33685e6899a9a6e683b">&#9670;&nbsp;</a></span>ESCRITA</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char ESCRITA = 'W'</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aa73d8e4acb0e70d2492b2d128df008fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa73d8e4acb0e70d2492b2d128df008fd">&#9670;&nbsp;</a></span>fim_ciclo</h2>
 
@@ -269,20 +284,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">int inicio_ciclo</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9ce60cd5115b9d5435fb4b994c6f46f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ce60cd5115b9d5435fb4b994c6f46f9">&#9670;&nbsp;</a></span>LEITURA</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char LEITURA = 'R'</td>
         </tr>
       </table>
 </div><div class="memdoc">
