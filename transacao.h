@@ -1,3 +1,7 @@
+/**
+ * @author Gustavo Henrique da Silva Barbosa / GRR20190485
+ */
+
 #ifndef __TRANSACAO__
 #define __TRANSACAO__
 /**

@@ -1,3 +1,7 @@
+/**
+ * @author Gustavo Henrique da Silva Barbosa / GRR20190485
+ */
+
 #include "seriabilidade.h"
 
 int inicio_ciclo, fim_ciclo;

@@ -1,3 +1,6 @@
+/**
+ * @author Gustavo Henrique da Silva Barbosa / GRR20190485
+ */
 #ifndef __SERIABILIDADE__
 #define __SERIABILIDADE__
 

@@ -1,3 +1,7 @@
+/**
+ * @author Gustavo Henrique da Silva Barbosa / GRR20190485
+ */
+
 #ifndef __EQUIVALENCIA__
 #define __EQUIVALENCIA__
 

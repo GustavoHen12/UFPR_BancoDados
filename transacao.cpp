@@ -1,3 +1,6 @@
+/**
+ * @author Gustavo Henrique da Silva Barbosa / GRR20190485
+ */
 #include"transacao.h"
 
 operacao::operacao(int ts, int tr, char op_tr, char atr){

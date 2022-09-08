@@ -1,3 +1,6 @@
+/**
+ * @author Gustavo Henrique da Silva Barbosa / GRR20190485
+ */
 #include <bits/stdc++.h>
 #include "seriabilidade.h"
 #include "equivalencia.h"
