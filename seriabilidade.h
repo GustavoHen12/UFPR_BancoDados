@@ -6,6 +6,6 @@
 
 using namespace std;
 
-bool verificaSeriabilidade(vector<operacao> &escalonamento, vector<int>& transacoes);
+bool verificaSeriabilidade(vector<operacao> &escalonamento);
 
 #endif

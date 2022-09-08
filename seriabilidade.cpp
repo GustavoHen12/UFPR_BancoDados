@@ -70,7 +70,14 @@ bool dfs(int v, vector<vector<int>>& g, vector<char>& cor, vector<int>& pai) {
     return false;
 }
 
-bool verificaSeriabilidade(vector<operacao> &escalonamento, vector<int>& transacoes){
+/**
+ * @brief 
+ * 
+ * @param escalonamento 
+ * @return true 
+ * @return false 
+ */
+bool verificaSeriabilidade(vector<operacao> &escalonamento) {
     // Cria grafo
     vector<vector<int>> g;
     int size = criaGrafoSeriabilidade(escalonamento, g);

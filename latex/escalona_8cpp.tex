@@ -1,0 +1,60 @@
+\hypertarget{escalona_8cpp}{}\doxysection{escalona.\+cpp File Reference}
+\label{escalona_8cpp}\index{escalona.cpp@{escalona.cpp}}
+{\ttfamily \#include $<$bits/stdc++.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}seriabilidade.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}equivalencia.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{escalona_8cpp_a09ff468539e973a5aca9caec74b82e73}{processa\+Transacoes}} (vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&escalonamento, vector$<$ int $>$ \&transacoes)
+\begin{DoxyCompactList}\small\item\em Função que processa as transações do escalonamento até o momento. Se foi adicionado uma nova transação no escalonamento, a identificação dessa é adicionado a lista de transações. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{escalona_8cpp_ab349088b44d2d6f2bf5df9d44a8f1594}{processa\+Escalonamento}} (vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&escalonamento, vector$<$ int $>$ \&transacoes)
+\begin{DoxyCompactList}\small\item\em Função que processa o escalonamento atual e imprime o resultado. Essa função irá verificar a seriabilidade do agendamento e se ele possui um equivalente por visão. O resultado é impresso da seguinte forma\+: \mbox{[}transações\mbox{]} \mbox{[}SS/\+NS\mbox{]} \mbox{[}NS/\+NV\mbox{]}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{escalona_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{escalona_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{escalona_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{escalona.cpp@{escalona.cpp}!main@{main}}
+\index{main@{main}!escalona.cpp@{escalona.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{escalona_8cpp_ab349088b44d2d6f2bf5df9d44a8f1594}\label{escalona_8cpp_ab349088b44d2d6f2bf5df9d44a8f1594}} 
+\index{escalona.cpp@{escalona.cpp}!processaEscalonamento@{processaEscalonamento}}
+\index{processaEscalonamento@{processaEscalonamento}!escalona.cpp@{escalona.cpp}}
+\doxysubsubsection{\texorpdfstring{processaEscalonamento()}{processaEscalonamento()}}
+{\footnotesize\ttfamily void processa\+Escalonamento (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&}]{escalonamento,  }\item[{vector$<$ int $>$ \&}]{transacoes }\end{DoxyParamCaption})}
+
+
+
+Função que processa o escalonamento atual e imprime o resultado. Essa função irá verificar a seriabilidade do agendamento e se ele possui um equivalente por visão. O resultado é impresso da seguinte forma\+: \mbox{[}transações\mbox{]} \mbox{[}SS/\+NS\mbox{]} \mbox{[}NS/\+NV\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em escalonamento} & Listagem com todas as operações do escalonamento correte \\
+\hline
+{\em transacoes} & Vetor com o número de todas as transaçõe que devem ser processadas \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{escalona_8cpp_a09ff468539e973a5aca9caec74b82e73}\label{escalona_8cpp_a09ff468539e973a5aca9caec74b82e73}} 
+\index{escalona.cpp@{escalona.cpp}!processaTransacoes@{processaTransacoes}}
+\index{processaTransacoes@{processaTransacoes}!escalona.cpp@{escalona.cpp}}
+\doxysubsubsection{\texorpdfstring{processaTransacoes()}{processaTransacoes()}}
+{\footnotesize\ttfamily bool processa\+Transacoes (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&}]{escalonamento,  }\item[{vector$<$ int $>$ \&}]{transacoes }\end{DoxyParamCaption})}
+
+
+
+Função que processa as transações do escalonamento até o momento. Se foi adicionado uma nova transação no escalonamento, a identificação dessa é adicionado a lista de transações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em escalonamento} & Listagem com todas as operações do escalonamento correte \\
+\hline
+{\em transacoes} & Lista com todas as transações atuais \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se o escalonamento é válido (se todas as transações foram comitadas), caso contrário false 
+\end{DoxyReturn}

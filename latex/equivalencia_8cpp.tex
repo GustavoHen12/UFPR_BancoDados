@@ -1,0 +1,105 @@
+\hypertarget{equivalencia_8cpp}{}\doxysection{equivalencia.\+cpp File Reference}
+\label{equivalencia_8cpp}\index{equivalencia.cpp@{equivalencia.cpp}}
+{\ttfamily \#include \char`\"{}equivalencia.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{equivalencia_8cpp_ab9ed16b2b508bc3459a32be79835bcb5}{get\+Posicao\+Transacao}} (vector$<$ int $>$ \&ordem\+\_\+tr, int transacao)
+\begin{DoxyCompactList}\small\item\em A partir da identificação da transação retorna a posição que ela é executada na nova ordenação. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{equivalencia_8cpp_a44dda65a42f0f3e70a24d60d1c9b7747}{alterou\+Ordem}} (vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&escalonamento, vector$<$ int $>$ \&ordem\+\_\+tr, int ti, bool leitura)
+\begin{DoxyCompactList}\small\item\em Verifica se para uma determinada operação de leitura ou escrita sua ordem, executando seguindo a \char`\"{}ordem\+\_\+tr\char`\"{} foi alterada em relação ao escalonamento original, ou seja, verifica se todas as escritas do atributo que eram realizadas antes, continuam sendo realizadas antes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{equivalencia_8cpp_a20e7bb809b12a17772e37dc332e50f83}{visao\+Valida}} (vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&escalonamento, vector$<$ int $>$ \&ordem\+\_\+tr)
+\begin{DoxyCompactList}\small\item\em A partir do escalonamento original, executa o algoritmo de teste de visão verificando se uma determinada ordem de execução é válida. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{equivalencia_8cpp_aa137ef79d81f1142d9acd8dbc304ac8f}{verifica\+Equivalencia}} (vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&escalonamento, vector$<$ int $>$ \&transacoes)
+\begin{DoxyCompactList}\small\item\em Realiza testes verificando se o escalonamento possui ou não equivalente por visão. O funcionamento consiste em gerar diversas permutações das transações até encontrar alguma que seja válida. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{equivalencia_8cpp_a44dda65a42f0f3e70a24d60d1c9b7747}\label{equivalencia_8cpp_a44dda65a42f0f3e70a24d60d1c9b7747}} 
+\index{equivalencia.cpp@{equivalencia.cpp}!alterouOrdem@{alterouOrdem}}
+\index{alterouOrdem@{alterouOrdem}!equivalencia.cpp@{equivalencia.cpp}}
+\doxysubsubsection{\texorpdfstring{alterouOrdem()}{alterouOrdem()}}
+{\footnotesize\ttfamily bool alterou\+Ordem (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&}]{escalonamento,  }\item[{vector$<$ int $>$ \&}]{ordem\+\_\+tr,  }\item[{int}]{ti,  }\item[{bool}]{leitura }\end{DoxyParamCaption})}
+
+
+
+Verifica se para uma determinada operação de leitura ou escrita sua ordem, executando seguindo a \char`\"{}ordem\+\_\+tr\char`\"{} foi alterada em relação ao escalonamento original, ou seja, verifica se todas as escritas do atributo que eram realizadas antes, continuam sendo realizadas antes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em escalonamento} & Vetor com as operações na ordem original \\
+\hline
+{\em ordem\+\_\+tr} & Ordenação das transações que se quer testar \\
+\hline
+{\em ti} & Posição da operação que se deseja testar no vetor de escalonamento \\
+\hline
+{\em leitura} & Se deve ser testado a leitura ou escrita \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true se a ordem foi alterada 
+
+false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{equivalencia_8cpp_ab9ed16b2b508bc3459a32be79835bcb5}\label{equivalencia_8cpp_ab9ed16b2b508bc3459a32be79835bcb5}} 
+\index{equivalencia.cpp@{equivalencia.cpp}!getPosicaoTransacao@{getPosicaoTransacao}}
+\index{getPosicaoTransacao@{getPosicaoTransacao}!equivalencia.cpp@{equivalencia.cpp}}
+\doxysubsubsection{\texorpdfstring{getPosicaoTransacao()}{getPosicaoTransacao()}}
+{\footnotesize\ttfamily int get\+Posicao\+Transacao (\begin{DoxyParamCaption}\item[{vector$<$ int $>$ \&}]{ordem\+\_\+tr,  }\item[{int}]{transacao }\end{DoxyParamCaption})}
+
+
+
+A partir da identificação da transação retorna a posição que ela é executada na nova ordenação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ordem\+\_\+tr} & Ordenação das transações que se quer testar \\
+\hline
+{\em transacao} & Identificação da transação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{equivalencia_8cpp_aa137ef79d81f1142d9acd8dbc304ac8f}\label{equivalencia_8cpp_aa137ef79d81f1142d9acd8dbc304ac8f}} 
+\index{equivalencia.cpp@{equivalencia.cpp}!verificaEquivalencia@{verificaEquivalencia}}
+\index{verificaEquivalencia@{verificaEquivalencia}!equivalencia.cpp@{equivalencia.cpp}}
+\doxysubsubsection{\texorpdfstring{verificaEquivalencia()}{verificaEquivalencia()}}
+{\footnotesize\ttfamily bool verifica\+Equivalencia (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&}]{escalonamento,  }\item[{vector$<$ int $>$ \&}]{transacoes }\end{DoxyParamCaption})}
+
+
+
+Realiza testes verificando se o escalonamento possui ou não equivalente por visão. O funcionamento consiste em gerar diversas permutações das transações até encontrar alguma que seja válida. 
+
+Realiza testes verificando se o escalonamento possui ou não equivalente por visão.
+
+
+\begin{DoxyParams}{Parameters}
+{\em escalonamento} & Listagem com todas as operações do escalonamento \\
+\hline
+{\em transacoes} & Vetor com a identificação das transações que serão processadas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se o escalonamento possui equivalente e false caso contrário 
+\end{DoxyReturn}
+\mbox{\Hypertarget{equivalencia_8cpp_a20e7bb809b12a17772e37dc332e50f83}\label{equivalencia_8cpp_a20e7bb809b12a17772e37dc332e50f83}} 
+\index{equivalencia.cpp@{equivalencia.cpp}!visaoValida@{visaoValida}}
+\index{visaoValida@{visaoValida}!equivalencia.cpp@{equivalencia.cpp}}
+\doxysubsubsection{\texorpdfstring{visaoValida()}{visaoValida()}}
+{\footnotesize\ttfamily bool visao\+Valida (\begin{DoxyParamCaption}\item[{vector$<$ \mbox{\hyperlink{classoperacao}{operacao}} $>$ \&}]{escalonamento,  }\item[{vector$<$ int $>$ \&}]{ordem\+\_\+tr }\end{DoxyParamCaption})}
+
+
+
+A partir do escalonamento original, executa o algoritmo de teste de visão verificando se uma determinada ordem de execução é válida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em escalonamento} & Vetor com as operações na ordem original \\
+\hline
+{\em ordem\+\_\+tr} & Ordenação das transações que se quer testar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna true se a ordem for válida e false caso contrário 
+\end{DoxyReturn}
